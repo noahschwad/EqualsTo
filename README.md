@@ -1,12 +1,12 @@
 Team Name: EqualsTo
 
 List of Members: 
-	Tyler Voiles (hasn’t met with us yet)
-	Dylan Schneider
-	Noah Rosenthal
-	Noah Schwadron
-	Zack Salama
-	Gongyuan Xing
+	Tyler Voiles (hasn’t met with us yet), 
+	Dylan Schneider, 
+	Noah Rosenthal, 
+	Noah Schwadron, 
+	Zack Salama, 
+	Gongyuan Xing 
 
 Description:
 
