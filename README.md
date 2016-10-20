@@ -1,17 +1,16 @@
 Team Name: EqualsTo
 
 List of Members: 
-	Tyler Voiles (hasn’t met with us yet), 
+	Noah Schwadron,
 	Dylan Schneider, 
 	Noah Rosenthal, 
-	Noah Schwadron, 
 	Zack Salama, 
 	Gongyuan Xing 
 
 Description:
 
 EqualsTo.io is a service that helps connect people with STEM backgrounds in the boulder area with like-minded people. Rather than basing connections on judging other users’ profiles or very broad, nonspecific questions, our service connects people based on details that are much more relevant to STEM nerds.
-	Say you’re a math major, so you’re always on the engineering side of campus but none of the people you run into share your appreciation for pure, unapplied mathematics. Traditional platonic meeting sites don’t take into account nitty gritty details of who you are as a nerd, but our specifically tailored questions will help to differentiate different “subcategories” of nerds which will result in stronger friendships.
+	Say you’re a math major, so you’re always on the engineering side of campus but none of the people you run into share your appreciation for pure, unapplied mathematics. Traditional platonic meeting sites don’t take into account nitty gritty details of who you are as a nerd, but our specifically tailored questions will help to differentiate different “subcategories” of nerds which will result in stronger connections.
 	We use a simple “would you rather” or “which do you prefer” questioning format which makes creating your nerd personality profile a breeze.
 
 Vision Statement: Help foster innovation by connecting local like-minded STEM enthusiasts.
