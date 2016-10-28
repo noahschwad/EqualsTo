@@ -73,10 +73,14 @@ WSGI_APPLICATION = 'equalsto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {
+DATABASES = {		#Noah changed this part because it was originally for sqlite, not mysql
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'equalsto',
+	'USER': 'goxi3959@gmail.com',
+	'PASSWORD': 'xgy19960624',
+	'HOST': '',
+	'PORT': '',
     }
 }
 
