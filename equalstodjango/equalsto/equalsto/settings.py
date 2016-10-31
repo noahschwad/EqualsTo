@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&=l5@_=5$=e35@_^xyz9p$w$59)!caci#pmi2#fd_*%l#a-!de'
+SECRET_KEY = 'tdw7iv0r*tpxgq71*^!ng5%ky4=w0#j1z%$^__=5thxmdmzups'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -73,14 +74,10 @@ WSGI_APPLICATION = 'equalsto.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
-DATABASES = {		#Noah changed this part because it was originally for sqlite, not mysql
+DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'equalsto',
-	'USER': 'goxi3959@gmail.com',
-	'PASSWORD': 'xgy19960624',
-	'HOST': '',
-	'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
