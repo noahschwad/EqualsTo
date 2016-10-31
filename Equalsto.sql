@@ -26,7 +26,7 @@ CREATE TABLE questions (
      answer2          VARCHAR(40)     NOT NULL,
      times_answered   INT             NOT NULL,
      answered_yes     ENUM('Y','N')    NOT NULL,   
-     PRIMARY KEY (userID), REFERENCES users(userId)
+     PRIMARY KEY (userID), REFERENCES users(userId)     --seems like primary key should be question_ID
     
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
