@@ -1,0 +1,8 @@
+We are using sqlite3.
+We have 3 tables: Users, questions, and answers.
+
+Our users table will contain information about the users will be a dynamic size that will increase as more users join the website.
+
+Our questions table will contain all of our question prompts. This table will be more static size until we decide to add more surveys. (we are currently working on our first survey)
+
+Our answers table will contain all of the answers for all of the users. It will relate the users table and the question table with the users answers to each question. This table is where we store user answers.
