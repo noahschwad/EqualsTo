@@ -1,0 +1,18 @@
+body { 
+	background-color: Cyan;
+} 
+
+h1 {
+	text-align: center;
+	color: Crimson;
+	font-family: "Arial Black";
+} 
+
+h2 {
+	color: DarkGreen;
+	font-family: "Comic Sans MS"
+}
+
+p {
+	font-family: Arial;
+} 
