@@ -9,8 +9,6 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-#import this to call autoonetoonefield
-from annoying.fields import AutoOneToOneField
 
 # Create your models here.
 
@@ -27,17 +25,17 @@ class tempUser(AbstractUser):
 			return self._customer_profile
 		except CustomerProfile.DoesNotExist:
 			return CustomerProfile.objects.create(user=self,)
-"""
+
 
 class UserAttributes(models.Model):
-	user = models.AutoOneToOneField(User, on_delete=models.CASCADE)
-	
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	"""
 
 class Answer(models.Model):
 	#connect answer to question
 	question = models.ForeignKey(Question, on_delete=models.CASCADE)
 	#connect answer to user
-	user = models.ForeignKey(UserAttributes, on_delete=models.CASCADE)
+	#user = models.ForeignKey(UserAttributes, on_delete=models.CASCADE)
 	#data holding quiz answers
 	answer_1 = models.IntegerField(default = 0)
 	answer_2 = models.IntegerField(default = 0)
@@ -58,11 +56,3 @@ class Answer(models.Model):
 #attach additional attributes here.
 
 
-@receiver(post_save, sender=User)
-def create_user_profile(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.create(user=instance)
-
-@receiver(post_save, sender=User)
-def save_user_profile(sender, instance, **kwargs):
-    instance.profile.save()
