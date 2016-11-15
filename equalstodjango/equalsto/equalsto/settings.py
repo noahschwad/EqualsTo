@@ -1,4 +1,5 @@
 #need to install 'cryspy_forms' by sudo pip install django-crispy-forms
+#need to install 'braces' by sudo pip install django-braces
 
 """
 Django settings for equalsto project.
@@ -41,7 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'crispy_forms'
+    'crispy_forms',
 ]
 
 #set crispy_form template
