@@ -1,7 +1,9 @@
+from __future__ import absolute_import
 from django.http import HttpResponse
 from django.template import loader
 
 from .models import Question
+
 
 
 #apparently we can use render() as a shortcut instead of httpresponse. https://docs.djangoproject.com/en/1.10/intro/tutorial03/
@@ -26,3 +28,4 @@ def results(request, question_id):
 
 def vote(request, question_id):
 	return HttpResponse("You're voting on question %s." %question_id)
+

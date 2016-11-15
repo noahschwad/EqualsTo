@@ -15,8 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from .views import HomePageView, LoginView, LogOutView, SignUpView
 
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
-    url(r'^admin/', admin.site.urls),   
+    url(r'^admin/', admin.site.urls),
+    # homepage
+    url('^$', HomePageView.as_view(), name='home'),
+    #sign up
+    url(r'^accounts/register/$', SignUpView.as_view(), name='signup'),
+    #setup login view
+    url(r'^accounts/login/$', LoginView.as_view(), name='login'),
+    #logout
+    url(r'^accounts/logout/$', LogOutView.as_view(), name='logout'),   
 ]

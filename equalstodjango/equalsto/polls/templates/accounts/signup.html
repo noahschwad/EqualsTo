@@ -1,0 +1,14 @@
+{% load crispy_forms_tags %}
+
+{% extends '_layouts/base.html' %}
+
+{% block title %}Register | {{ block.super }}{% endblock %}
+
+{% block headline %}<h1>Register for EqualsTo</h1>{% endblock %}
+
+{% block content %}
+    <form action='' method="POST">
+        {% crispy form %}
+        <input type="submit" value="Sign Up">
+    </form>
+{% endblock %}

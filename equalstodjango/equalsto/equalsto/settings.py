@@ -1,3 +1,5 @@
+#need to install 'cryspy_forms' by sudo pip install django-crispy-forms
+
 """
 Django settings for equalsto project.
 
@@ -33,12 +35,17 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'django.contrib.admin',
+    'django.contrib.admindocs',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms'
 ]
+
+#set crispy_form template
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -55,7 +62,7 @@ ROOT_URLCONF = 'equalsto.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'equalsto/templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +74,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'equalsto.wsgi.application'
 
@@ -100,6 +109,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+#set login url
+LOGIN_REDIRECT_URL = '/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
