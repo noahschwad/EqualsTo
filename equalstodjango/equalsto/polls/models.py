@@ -33,9 +33,9 @@ class UserAttributes(models.Model):
 
 class Answer(models.Model):
 	#connect answer to question
-	question = models.ForeignKey(Question, on_delete=models.CASCADE)
+	#question = models.ForeignKey(Question, on_delete=models.CASCADE)
 	#connect answer to user
-	#user = models.ForeignKey(UserAttributes, on_delete=models.CASCADE)
+	user = models.OneToOneField(User, on_delete=models.CASCADE)
 	#data holding quiz answers
 	answer_1 = models.IntegerField(default = 0)
 	answer_2 = models.IntegerField(default = 0)
@@ -47,6 +47,23 @@ class Answer(models.Model):
 	answer_8 = models.IntegerField(default = 0)
 	answer_9 = models.IntegerField(default = 0)
 	answer_10 = models.IntegerField(default = 0)
+
+"""Noah S was adding onetoonefield from user to answer,
+in addition I had to migrate the DB because changing models
+changes the db. got back to "no url to direct to" error which zack 
+had fixed and I just hadnt gotten off of github yet. should work but
+might need to rebuild database so answers instance gets created
+correctly for every user :)
+"""
+
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Answer.objects.create(user=instance)
+
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+    instance.answer.save()
 	
 	#answer_text = models.CharField(max_length=200)
 	#votes = models.IntegerField(default=0)
