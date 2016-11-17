@@ -33,10 +33,10 @@ class UserAttributes(models.Model):
 
 class Answer(models.Model):
 	#connect answer to question
-	#question = models.ForeignKey(Question, on_delete=models.CASCADE)
+	question = models.ForeignKey(Question, on_delete=models.CASCADE)
 	#connect answer to user
 	#user = models.ForeignKey(UserAttributes, on_delete=models.CASCADE)
-	user = models.OneToOneField(User, on_delete=models.CASCADE)
+	#user = models.OneToOneField(User, on_delete=models.CASCADE)
 	#data holding quiz answers
 	answer_1 = models.IntegerField(default = 0)
 	answer_2 = models.IntegerField(default = 0)
@@ -48,7 +48,7 @@ class Answer(models.Model):
 	answer_8 = models.IntegerField(default = 0)
 	answer_9 = models.IntegerField(default = 0)
 	answer_10 = models.IntegerField(default = 0)
-
+"""
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):
     if created:
@@ -57,7 +57,7 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.answer.save()
-	
+	"""
 	#answer_text = models.CharField(max_length=200)
 	#votes = models.IntegerField(default=0)
 	
