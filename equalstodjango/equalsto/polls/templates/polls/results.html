@@ -1,0 +1,47 @@
+{% block content %}
+
+{% load static %}
+<html>
+
+<head>
+    <title>EqualsTo Demo</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+</head>
+
+<body id=home>
+    <header id="logo">
+        <img src="http://i.imgur.com/cTSWWAu.png">
+    </header>
+    
+    <div id=info>
+    
+        <textarea id="matches" readonly>
+            ZackSalama's Matches:
+        
+                Stephen Hawking - 87%
+                
+                Dylan Schneider - 100%
+                
+                Cam Newton - 72%
+        </textarea>
+    
+        <textarea id="profile" readonly>
+            ZackSalama's Profile
+        
+            Name: Zack Salama
+        
+            Email: Zack.Salama@colorado.edu
+        
+            School: University of Colorado, Boulder
+        
+            Gender: Male
+        
+        
+        </textarea>
+        
+    </div>
+
+</body>
+
+</html>
+{% endblock %}

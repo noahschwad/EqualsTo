@@ -1,0 +1,32 @@
+
+<!-- this is template for game -->
+
+{% block content %}
+
+{% load static %}
+
+<html>
+
+    <head>
+        <title>EqualsTo</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">      
+    </head>
+
+	<header id="logo">        
+		<img src="http://i.imgur.com/cTSWWAu.png">
+	</header>
+    
+        <div id="question">
+            Would you rather...
+        </div>
+    
+        <div id="buttons">
+            <button id="B1" href="#" onclick="printAnswers()"> Click to start! </button>
+            <button id="B2" href="#" onclick="printAnswers()"> Click to start! </button>
+        </div>
+        
+    </header>
+
+</html>
+
+{% endblock content %}

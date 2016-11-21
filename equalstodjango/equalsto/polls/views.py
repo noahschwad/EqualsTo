@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-from django.http import HttpResponse
+from django.shortcuts import render
 from django.template import loader
 
 from .models import Question
@@ -11,26 +11,21 @@ from .models import Question
 
 #display the template at polls/templates/polls/index.html
 def index(request):
-    latest_question_list = Question.objects.order_by('-question_String')[:5]
-    template = loader.get_template('polls/index.html')
-    context = {
-        'latest_question_list': latest_question_list,
-    }
-    return HttpResponse(template.render(context, request))
+    	latest_question_list = Question.objects.order_by('-question_String')[:5]
+    	context = {
+        	'latest_question_list': latest_question_list,
+    	}
+    	return render(request, 'polls/index.html', context)
 
-#display data for each question
-def detail(request, question_id):
-	currenntQuestion = Question.objects.get(question_id)
-	template = loader.get_template('polls/detail.html')
+#play game
+def game(request, question_id):
+	currenntQuestion = Question.objects.get(id = question_id)
 	context = {
 		'currentQuestion': question,
 	}
-	return HttpResponse(template.render(context, request))
+	return render(request, 'polls/game.html', context)
 
 def results(request, question_id):
-	response = "You're looking at the results of question %s."
-	return HttpResponse(response % question_id)
-
-def vote(request, question_id):
-	return HttpResponse("You're voting on question %s." %question_id)
+	context = {}
+	return render(request, 'polls/results.html', context)
 
