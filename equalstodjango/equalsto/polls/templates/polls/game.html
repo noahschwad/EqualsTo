@@ -9,7 +9,7 @@
 
     <head>
         <title>EqualsTo</title>
-		<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">      
+	<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     </head>
 
 	<header id="logo">        
@@ -21,8 +21,8 @@
         </div>
     
         <div id="buttons">
-            <button id="B1" href="#" onclick="printAnswers()"> Click to start! </button>
-            <button id="B2" href="#" onclick="printAnswers()"> Click to start! </button>
+            <button id="B1" href="#" onclick=""> {{ question.answer_1 }} </button>
+            <button id="B2" href="#" onclick=""> {{ question.answer_2 }} </button>
         </div>
         
     </header>
