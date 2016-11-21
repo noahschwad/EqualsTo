@@ -1,0 +1,42 @@
+{% load static %}
+<html>
+
+    <head>
+        <title>EqualsTo Demo</title>
+            <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+                <script>
+                    var one = {a1:"Talk to Charles Darwin?", a2:"Talk to Isaac Newton?"}
+                    var two = {a1:"Have low risk/low reward?", a2:"Have high risk/high reward?"}
+                    var three = {a1:"Communicate in person?", a2:"Communicate virtually?"}
+                    var four = {a1:"Do a project fast, then go back and fix any problems?", a2:"Take your time and make sure everything is correct the first time?"}
+                    var i = 0;
+                    var answers = [one,two,three,four]
+                    function printAnswers() {
+                        if(i==answers.length){
+                            window.location.href = 'results.html';
+                        }
+                        document.getElementById("B1").innerHTML = answers[i].a1;
+                        document.getElementById("B2").innerHTML = answers[i].a2;
+                        i++;
+                    }
+                </script>
+    </head>
+
+    <header id="logo">
+        
+        <img src="http://i.imgur.com/cTSWWAu.png">
+            </header>
+    
+        <div id="question">
+            Would you rather...
+        </div>
+    
+        <div id="buttons">
+            <button id="B1" href="#" onclick="printAnswers()"> Click to start! </button>
+            <button id="B2" href="#" onclick="printAnswers()"> Click to start! </button>
+        </div>
+        
+    </header>
+
+</html>
+
