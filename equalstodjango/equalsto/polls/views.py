@@ -18,8 +18,8 @@ def index(request):
     	return render(request, 'polls/index.html', context)
 
 #play game
-def game(request, qString):
-	currentQuestion = Question.objects.get(question_String = qString)
+def game(request, qNum):
+	currentQuestion = Question.objects.get(id = qNum)
 	context = {
 		'question': currentQuestion,
 	}

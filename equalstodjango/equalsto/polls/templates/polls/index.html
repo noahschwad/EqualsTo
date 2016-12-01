@@ -8,7 +8,7 @@
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="/polls/{{ question.question_String }}/">{{ question.question_String }}</a></li>
+        <li><a href="/polls/{{ question.id }}/">{{ question.question_String }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
