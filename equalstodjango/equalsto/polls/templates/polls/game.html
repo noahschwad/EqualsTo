@@ -21,15 +21,15 @@
         </div>
     
         <div id="buttons">
-		<style> 
-			a {
-				text-decoration: none;
-			}
-		</style>
-		<a href="{% url 'index' %}">
-			<button id="B1" onclick=""> {{ question.answer_1 }} </button>
-			<button id="B2" onclick=""> {{ question.answer_2 }} </button>
-		</a>
+		<form id="B1" action="{% url 'polls:answered1' question.id %}" method="post">
+			{% csrf_token %}
+			<button id="B1"> {{ question.answer_1 }} </button>
+		</form>
+
+		<form id="B2" action="{% url 'polls:answered2' question.id %}" method="post">
+			{% csrf_token %}
+			<button id="B2"> {{ question.answer_2 }} </button>
+		</form>
         </div>
         
     </header>

@@ -18,7 +18,7 @@ from django.contrib import admin
 from .views import HomePageView, LoginView, LogOutView, SignUpView
 
 urlpatterns = [
-    url(r'^polls/', include('polls.urls')),
+    url(r'^polls/', include('polls.urls', namespace='polls'), name='polls'),
     url(r'^admin/', admin.site.urls),
     # homepage
     url('^$', HomePageView.as_view(), name='home'),

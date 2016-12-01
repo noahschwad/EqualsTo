@@ -1,9 +1,10 @@
 from __future__ import absolute_import
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.template import loader
-
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 from .models import Question
-
+from .models import Answer
 
 
 #apparently we can use render() as a shortcut instead of httpresponse. https://docs.djangoproject.com/en/1.10/intro/tutorial03/
@@ -24,6 +25,18 @@ def game(request, qNum):
 		'question': currentQuestion,
 	}
 	return render(request, 'polls/game.html', context)
+
+def answered1(request, qNum):
+	currentAnswer = get_object_or_404(Answer, user = request.user)
+	whichAnswer = "answer_"+str(qNum)
+	setattr(currentAnswer, whichAnswer, 1)
+	return HttpResponseRedirect(reverse('polls:index'))
+
+def answered2(request, qNum):
+	currentAnswer = get_object_or_404(Answer, user = request.user)
+	whichAnswer = "answer_"+str(qNum)
+	setattr(currentAnswer, whichAnswer, 2)
+	return HttpResponseRedirect(reverse('polls:index'))
 
 def results(request):
 	context = {}
