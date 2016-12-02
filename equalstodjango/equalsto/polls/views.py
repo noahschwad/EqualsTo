@@ -30,12 +30,14 @@ def answered1(request, qNum):
 	currentAnswer = get_object_or_404(Answer, user = request.user)
 	whichAnswer = "answer_"+str(qNum)
 	setattr(currentAnswer, whichAnswer, 1)
+	currentAnswer.save()
 	return HttpResponseRedirect(reverse('polls:index'))
 
 def answered2(request, qNum):
 	currentAnswer = get_object_or_404(Answer, user = request.user)
 	whichAnswer = "answer_"+str(qNum)
 	setattr(currentAnswer, whichAnswer, 2)
+	currentAnswer.save()
 	return HttpResponseRedirect(reverse('polls:index'))
 
 def results(request):

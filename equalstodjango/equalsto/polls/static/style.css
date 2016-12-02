@@ -12,6 +12,10 @@ body{
     background-position: center center;
 }
 
+form {
+	display: inline;
+}
+
 #buttons {
     text-align: center;
     margin: 200px;
@@ -24,7 +28,7 @@ body{
     margin: -150px;
 }
 
-#B1,#B2{
+#B1,#B2 {
     background: linear-gradient(45deg, rgba(255,184,115,0.65) 0%,rgba(255,124,189,0.65) 50%,rgba(108,0,153,0.65) 100%);
     width: 400px;
     height: 400px;
