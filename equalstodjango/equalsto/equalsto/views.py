@@ -14,6 +14,7 @@ class HomePageView(generic.TemplateView):
 
 class SignUpView(generic.CreateView):
 	form_class = RegistrationForm
+	success_url = reverse_lazy('home')
 	model = User
 	template_name = 'accounts/signup.html'
 	views.AnonymousRequiredMixin

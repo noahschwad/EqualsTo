@@ -41,6 +41,37 @@ def answered2(request, qNum):
 	return HttpResponseRedirect(reverse('polls:index'))
 
 def results(request):
-	context = {}
-	return render(request, 'polls/results.html', context)
+	user_list = Answer.objects.all() #list of answers to compare
+	currentUser = get_object_or_404(Answer, user = request.user) #find currently logged in user
+	tempRelativeScore = 0
+	highestScore = 0
+	highestScoreUser = 0
+	for x in range(len(user_list)):
+		print (user_list[x])
+		if (currentUser.answer_1 == user_list[x].answer_1):
+			tempRelativeScore += 1
+		if (currentUser.answer_2 == user_list[x].answer_2):
+			tempRelativeScore += 1
+		if (currentUser.answer_3 == user_list[x].answer_3):
+			tempRelativeScore += 1
+		if (currentUser.answer_4 == user_list[x].answer_4):
+			tempRelativeScore += 1
+		if (currentUser.answer_5 == user_list[x].answer_5):
+			tempRelativeScore += 1
+		if (currentUser.answer_6 == user_list[x].answer_6):
+			tempRelativeScore += 1
+		if (currentUser.answer_7 == user_list[x].answer_7):
+			tempRelativeScore += 1
+		if (currentUser.answer_8 == user_list[x].answer_8):
+			tempRelativeScore += 1
+		if (currentUser.answer_9 == user_list[x].answer_9):
+			tempRelativeScore += 1
+		if (currentUser.answer_10 == user_list[x].answer_10):
+			tempRelativeScore += 1
+		if (highestScore > tempRelativeScore):
+			highestScore = tempRelativeScore
+			highestScoreUser = x
+	match = user_list[highestScoreUser].user
+	#print out highestScoreUser
+	return render(request, 'polls/results.html',{ "match_List": match })
 
