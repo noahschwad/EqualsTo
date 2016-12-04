@@ -14,4 +14,20 @@
 {% else %}
     <p>No polls are available.</p>
 {% endif %}
+	<style>
+		#B {
+			width: 300px;
+			padding: 20px;
+			cursor: pointer;
+			font-weight: bold;
+			font-size: 150%;
+			border: 1px solid #3366cc;
+			border-radius: 10px;
+			box-shadow:: 6px 6px 5px #999;
+		}
+	</style>
+	<form>
+		<input id="B" type="button" value="Results" onclick="window.location.href='{% url 'polls:results' %}'"/>
+	</form>
+
 {% endblock content %}
