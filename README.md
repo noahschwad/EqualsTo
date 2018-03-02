@@ -7,6 +7,8 @@ List of Members:
 	Zack Salama, 
 	Gongyuan Xing 
 
+Product Demo Video - https://youtu.be/LXKkN4F5bbU
+
 Description:
 
 EqualsTo.io is a service that helps connect people with STEM backgrounds in the boulder area with like-minded people. Rather than basing connections on judging other users’ profiles or very broad, nonspecific questions, our service connects people based on details that are much more relevant to STEM nerds.
