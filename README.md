@@ -1,6 +1,6 @@
 # EqualsTo
 
-This was a team project for a course called Software Development Methods and Tools (CSCI 3307)
+This is our team project for Software Development Methods and Tools (CSCI 3307)
 
 ### Team Members: 
 * Noah Schwadron
