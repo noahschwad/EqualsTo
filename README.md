@@ -1,6 +1,8 @@
-Team Name: EqualsTo
+# EqualsTo
 
-List of Members: 
+This was a team project for a course called Software Development Methods and Tools (CSCI 3307)
+
+### Team Members: 
 	Noah Schwadron,
 	Dylan Schneider, 
 	Noah Rosenthal, 
@@ -9,15 +11,15 @@ List of Members:
 
 Product Demo Video - https://youtu.be/LXKkN4F5bbU
 
-Description:
+## Description:
 
-EqualsTo.io is a service that helps connect people with STEM backgrounds in the boulder area with like-minded people. Rather than basing connections on judging other users’ profiles or very broad, nonspecific questions, our service connects people based on details that are much more relevant to STEM nerds.
+EqualsTo.io is a service that helps engineers connect with like-minded collaborators. Rather than basing connections on judging other users’ profiles or very broad, nonspecific questions, our service connects people based on details that are much more relevant to STEM nerds.
 	Say you’re a math major, so you’re always on the engineering side of campus but none of the people you run into share your appreciation for pure, unapplied mathematics. Traditional platonic meeting sites don’t take into account nitty gritty details of who you are as a nerd, but our specifically tailored questions will help to differentiate different “subcategories” of nerds which will result in stronger connections.
 	We use a simple “would you rather” or “which do you prefer” questioning format which makes creating your nerd personality profile a breeze.
 
 Vision Statement: Help foster innovation by connecting local like-minded STEM enthusiasts.
 
-Motivation: It is no secret that engineers, scientists, and mathematicians have issues communicating and making friends. We wanted to make an app where engineers could make connections by being matched to other engineers who have similar personalities and STEM interests. Our goal is to not only create friendships, but to foster innovation by connecting bright individuals that are more likely to work together better.
+Motivation: Solid, respectful, professional relationships are behind all innovations. We wanted to make an app where engineers could make connections by being matched to other engineers who have similar personalities and STEM interests. Our goal is to not only create friendships, but to foster innovation by connecting bright individuals that are more likely to work together better.
 
 Risks (What are the risks that would prevent you from completing this project?): General lack of knowledge about website and webapp design. All of the members of the team have different schedules, which may make it harder to meet up and work together.
 
