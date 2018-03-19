@@ -3,10 +3,10 @@
 This was a team project for a course called Software Development Methods and Tools (CSCI 3307)
 
 ### Team Members: 
-Noah Schwadron
-Dylan Schneider
-Noah Rosenthal
-Zack Salama
+Noah Schwadron, 
+Dylan Schneider, 
+Noah Rosenthal, 
+Zack Salama, 
 Gongyuan Xing 
 
 Product Demo Video - https://youtu.be/LXKkN4F5bbU
